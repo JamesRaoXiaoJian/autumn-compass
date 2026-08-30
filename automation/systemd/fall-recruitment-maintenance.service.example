@@ -1,0 +1,13 @@
+[Unit]
+Description=Audit Autumn Compass recruitment records
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=REPOSITORY_PATH
+ExecStart=REPOSITORY_PATH/automation/run-job-maintenance.sh
+TimeoutStartSec=2h
+
+[Install]
+WantedBy=default.target

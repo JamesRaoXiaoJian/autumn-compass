@@ -1,0 +1,30 @@
+{
+  "name": "autumn-compass",
+  "version": "1.0.0",
+  "description": "Privacy-first, self-hosted workspace for graduate recruitment.",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "apps/extension",
+    "apps/server"
+  ],
+  "scripts": {
+    "dev": "bash scripts/dev-stack.sh",
+    "dev:web": "npm run dev -w @autumn-compass/web",
+    "dev:server": "npm run dev -w @autumn-compass/server",
+    "start": "bash scripts/restart-dev.sh --start-only",
+    "restart": "bash scripts/restart-dev.sh",
+    "stop": "bash scripts/restart-dev.sh --stop-only",
+    "dev:extension": "npm run dev -w @autumn-compass/extension",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "check:public": "node scripts/check-public-tree.mjs",
+    "export:public": "bash scripts/export-public-source.sh",
+    "verify": "npm run check:public && npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

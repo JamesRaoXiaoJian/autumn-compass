@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Autumn Compass recruitment maintenance every day
+
+[Timer]
+OnCalendar=*-*-* 03:30:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=fall-recruitment-maintenance.service
+
+[Install]
+WantedBy=timers.target

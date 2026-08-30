@@ -1,0 +1,19 @@
+{
+  "name": "@autumn-compass/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "dev": "node --watch src/index.mjs",
+    "check": "node --check src/index.mjs && node --check src/database.mjs && node --check src/validation.mjs && node --check src/recruitment-maintenance-scope.mjs",
+    "typecheck": "npm run check",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0"
+  }
+}

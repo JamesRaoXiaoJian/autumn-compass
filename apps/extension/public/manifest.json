@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "秋招罗盘 · 智能填表",
+  "description": "识别招聘网站申请表单，使用本地简历字段安全、快速地完成填写。",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "秋招罗盘",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  }
+}
